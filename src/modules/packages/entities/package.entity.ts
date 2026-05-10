@@ -18,8 +18,8 @@ export class Package {
     @Prop({required : true})
     image! : string
 
-    @Prop({required : false})
-    gallery! : string[]
+    @Prop({ required: false })
+    gallery!: string[]
 
     @Prop({required : false, default: []})
     features! : string[]

@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateMessageDto } from './dto/create-message.dto';
 import { UpdateMessageDto } from './dto/update-message.dto';
+import { contact_type } from 'src/shared/enums';
 
 @Injectable()
 export class MessagesService {
@@ -23,4 +24,8 @@ export class MessagesService {
   remove(id: number) {
     return `This action removes a #${id} message`;
   }
+  detectContactType = (contact) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(contact) ? contact_type.EMAIL : contact_type.PHONE
+  };
 }
