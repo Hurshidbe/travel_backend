@@ -26,6 +26,6 @@ export class MessagesService {
   }
   detectContactType = (contact) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(contact) ? contact_type.EMAIL : contact_type.PHONE
+    return emailRegex.test(contact) ? contact_type.EMAIL : contact_type.PHONE;
   };
 }

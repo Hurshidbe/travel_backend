@@ -1,21 +1,22 @@
-import { Prop, Schema } from "@nestjs/mongoose";
-import { contact_type } from "src/shared/enums";
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { contact_type } from 'src/shared/enums';
 
-@Schema({timestamps : true})
+@Schema({ timestamps: true })
 export class Message {
+  @Prop({ required: true })
+  name!: string;
 
-    @Prop({required : true})
-    name! : string
-    
-    @Prop({required : true})
-    contact!: string
+  @Prop({ required: true })
+  contact!: string;
 
-    @Prop({required : true})
-    message! : string
-// from backend
-    @Prop({required : true, default : false})
-    isRead! : boolean
+  @Prop({ required: true })
+  message!: string;
+  // from backend
+  @Prop({ required: true, default: false })
+  isRead!: boolean;
 
-    @Prop({required: false})
-    contactType?: contact_type
+  @Prop({ required: false })
+  contactType?: contact_type;
 }
+
+export const MessageSchema = SchemaFactory.createForClass(Message);

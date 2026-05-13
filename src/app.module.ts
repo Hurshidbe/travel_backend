@@ -16,8 +16,8 @@ import { ConfigModule } from '@nestjs/config';
 @Module({
   imports: [
     ConfigModule.forRoot({
-      isGlobal : true,
-      envFilePath : '.env',
+      isGlobal: true,
+      envFilePath: '.env',
     }),
     UserModule,
     MessagesModule,
@@ -28,7 +28,7 @@ import { ConfigModule } from '@nestjs/config';
     BookingsModule,
     AuthModule,
     PackagesModule,
-    DbModule
+    DbModule,
   ],
   controllers: [AppController],
   providers: [AppService],

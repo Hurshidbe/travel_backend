@@ -4,13 +4,13 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { config } from 'dotenv';
 
 @Module({
-  imports : [
+  imports: [
     MongooseModule.forRootAsync({
-      inject : [ConfigService],
-      useFactory :(config : ConfigService)=>({
-        uri : config.get<string>('MONGO_URI')
-      })
-    })
+      inject: [ConfigService],
+      useFactory: (config: ConfigService) => ({
+        uri: config.get<string>('MONGO_URI'),
+      }),
+    }),
   ],
   controllers: [],
   providers: [],
