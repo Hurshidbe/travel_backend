@@ -1,13 +1,11 @@
 import {
-  IsArray,
-  IsDateString,
   IsNotEmpty,
   IsNumber,
-  IsOptional,
   IsString,
-  Length,
-  Max,
   MaxLength,
+  IsDateString,
+  IsArray,
+  IsOptional,
 } from 'class-validator';
 
 export class CreatePackageDto {
@@ -28,14 +26,6 @@ export class CreatePackageDto {
   @IsNumber()
   @IsNotEmpty()
   price!: number;
-
-  @IsString()
-  @IsNotEmpty()
-  image!: string;
-
-  @IsArray()
-  @IsOptional()
-  gallery?: string[];
 
   @IsArray()
   @IsOptional()

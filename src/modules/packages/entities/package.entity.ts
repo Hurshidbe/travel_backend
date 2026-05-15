@@ -14,13 +14,13 @@ export class Package {
   @Prop({ required: true })
   price!: number;
 
-  @Prop({ required: true })
+  @Prop({ required: true, default : "" })
   image!: string;
 
-  @Prop({ required: false })
+  @Prop({ default: [] })
   gallery!: string[];
 
-  @Prop({ required: false, default: [] })
+  @Prop({ default: [] })
   features!: string[];
 
   @Prop({ required: true })

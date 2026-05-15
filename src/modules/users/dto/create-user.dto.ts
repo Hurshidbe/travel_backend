@@ -9,7 +9,7 @@ import {
   Max,
   MaxLength,
 } from 'class-validator';
-import { user_role } from 'src/shared/enums';
+import { user_permissions, user_role } from 'src/shared/enums';
 
 export class CreateUserDto {
   @IsString()
@@ -28,9 +28,10 @@ export class CreateUserDto {
   role?: user_role;
 
   @IsArray()
+  @IsEnum(user_permissions)
   @IsOptional()
   @IsString({ each: true })
-  permissions?: string[];
+  permissions?: user_permissions[];
 
   @IsNotEmpty()
   @IsStrongPassword({
@@ -39,3 +40,4 @@ export class CreateUserDto {
   })
   password!: string;
 }
+ 

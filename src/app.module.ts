@@ -12,6 +12,7 @@ import { AuthModule } from './modules/auth/auth.module';
 import { PackagesModule } from './modules/packages/packages.module';
 import { DbModule } from './modules/db/db.module';
 import { ConfigModule } from '@nestjs/config';
+import { CloudinaryModule } from './modules/cloudinary/cloudinary.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { ConfigModule } from '@nestjs/config';
     AuthModule,
     PackagesModule,
     DbModule,
+    CloudinaryModule,
   ],
   controllers: [AppController],
   providers: [AppService],

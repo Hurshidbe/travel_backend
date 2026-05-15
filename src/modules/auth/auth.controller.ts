@@ -13,7 +13,7 @@ import {
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto/Login.dto';
 import { RegisterDto } from './dto/Register.dto';
-import { JwtAuthGuard } from './guards/jwt-auth.guard';
+import { JwtAuthGuard } from '../../guards/jwt-auth.guard';
 
 interface JwtPayload {
   userId: string;

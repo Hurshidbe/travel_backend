@@ -20,3 +20,13 @@ export enum customer_lang {
   RU = 'ru',
   EN = 'en',
 }
+
+export enum user_permissions {
+  PACKAGES = 'packages',
+  BOOKINGS = 'bookings',
+  CUSTOMERS = 'customers',
+  FINANCE = 'finance',
+  EXPENCES = 'expenses',
+  ANALYTICS = 'analytics',
+  LOGS = 'logs',
+}
